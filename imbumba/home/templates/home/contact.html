@@ -1,44 +1,99 @@
 {% extends 'home/base.html' %}
+{% load static %}
 
 {% block title %}Contact | Imbumba Radiology Imaging{% endblock %}
 
 {% block content %}
 
-<section class="py-16 text-center">
-    <h2 class="text-4xl font-semibold text-blue-800 mb-6">Contact Us</h2>
-    <p class="text-lg text-gray-700 mb-10">We’d love to hear from you. Reach out with any questions or to schedule a consultation.</p>
-    <div class="space-y-2">
-        <h1>KwaZulu Natal- Main Branch</h1>
-        <p>📍 Essen Medical Centre, </p>
-        <p>X-Ray Department,</p> 
-        <p>12 Malcolm Road,</p> 
-        <p>Ladysmith, 3370</p>
-        <p>📞 +27 87 138 5243 / +27 36 631 0671</p>
-        <p>📧 reception@imaging21.com</p>
-    </div>
+<!-- Header -->
+<section class="bg-blue-900 text-white py-16 text-center">
+    <h2 class="text-4xl font-extrabold" data-aos="zoom-in">Contact Us</h2>
+    <p class="text-lg mt-3 opacity-90" data-aos="fade-up">We’d love to hear from you.</p>
+</section>
 
-    <br>
+<!-- Branch Cards -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center text-blue-800 mb-12" data-aos="fade-up">
+            Our Branches
+        </h3>
 
-    <div class="space-y-2">
-        <h1>Gauteng - Sitelite Branches</h1>
-        <p>📍 Dr Nkosi Medical Centre, </p>
-        <p>X-Ray Department,</p> 
-        <p>615 Hospital Road,</p> 
-        <p>Skhosana, Katlehong, 1431</p>
-        <p>📞 +27 10 025 8989</p>
-        <p>📧 reception.kat@imbumbaradiology.com</p>
-    </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-    <br>
+            <!-- Branch 1 -->
+            <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition" data-aos="fade-up">
+                <h4 class="text-xl font-semibold text-blue-700 mb-3">
+                    KwaZulu Natal – Main Branch
+                </h4>
 
-    <div class="space-y-2">
-        <p>📍 Dr Nkosi Medical Centre, </p>
-        <p>X-Ray Department,</p> 
-        <p>2946 Moagi Road,</p> 
-        <p>Vosloorus, ext 2, 1475</p>
-        <p>📞 +27 10 036 4680</p>
-        <p>📧 reception.voslo@imbumbaradiology.com</p>
+                <p class="font-medium">📍 Essen Medical Centre</p>
+                <p>X-Ray Department</p>
+                <p>12 Malcolm Road, Ladysmith, 3370</p>
+                <p class="mt-3">📞 +27 87 138 5243</p>
+                <p>📞 +27 36 631 0671</p>
+                <p>📧 reception@imaging21.com</p>
+            </div>
+
+            <!-- Branch 2 -->
+            <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+                <h4 class="text-xl font-semibold text-blue-700 mb-3">
+                    Gauteng – Katlehong Branch
+                </h4>
+
+                <p class="font-medium">📍 Dr Nkosi Medical Centre</p>
+                <p>615 Hospital Road, Skhosana, Katlehong, 1431</p>
+                <p class="mt-3">📞 +27 10 025 8989</p>
+                <p>📧 reception.kat@imbumbaradiology.com</p>
+            </div>
+
+            <!-- Branch 3 -->
+            <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+                <h4 class="text-xl font-semibold text-blue-700 mb-3">
+                    Gauteng – Vosloorus Branch
+                </h4>
+
+                <p class="font-medium">📍 Dr Nkosi Medical Centre</p>
+                <p>2946 Moagi Road, Vosloorus Ext 2, 1475</p>
+                <p class="mt-3">📞 +27 10 026 4680</p>
+                <p>📧 reception.voslo@imbumbaradiology.com</p>
+            </div>
+
+        </div>
     </div>
 </section>
+
+<!-- Footer -->
+<footer class="bg-blue-900 text-white py-10 mt-16">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Logo & About -->
+        <div>
+            <h4 class="text-xl font-semibold mb-3">Imbumba Radiology Imaging</h4>
+            <p class="text-gray-200 text-sm leading-relaxed">
+                Providing professional diagnostic imaging services with precision, care and compassion.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h5 class="font-semibold text-lg mb-3">Quick Links</h5>
+            <ul class="space-y-2 text-gray-200 text-sm">
+                <li><a href="/" class="hover:text-white">Home</a></li>
+                <li><a href="/appointments" class="hover:text-white">Appointments</a></li>
+                <li><a href="/services" class="hover:text-white">Services</a></li>
+                <li><a href="/contact" class="hover:text-white">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h5 class="font-semibold text-lg mb-3">Reach Out To Us</h5>
+            <p class="text-gray-200 text-sm">📧 enquiries@imbumbaradiology.com</p>
+            <p class="text-gray-200 text-sm">📞 +27 87 138 5243</p>
+            <p class="text-gray-200 text-sm mt-2">Open Monday – Saturday</p>
+        </div>
+
+    </div>
+</footer>
 
 {% endblock %}
