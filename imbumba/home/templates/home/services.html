@@ -1,7 +1,6 @@
 {% extends 'home/base.html' %}
 {% load static %}
 
-
 {% block title %}Imbumba Radiology | Services{% endblock %}
 
 {% block content %}
@@ -20,58 +19,72 @@
     </div>
 </section>
 
-<!-- Services with Images -->
+<!-- Services Section -->
 <section class="py-20 bg-gray-50">
-    <h2 class="text-4xl font-bold text-center text-blue-800 mb-12">Our Services</h2>
+    <h2 class="text-4xl font-bold text-center text-blue-800 mb-12">
+        Our Services
+    </h2>
 
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
+    <div class="max-w-7xl mx-auto px-6 
+                grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-        <!-- Card 1 -->
-
-        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition">
+        <!-- General X-Rays -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden">
             <img src="{% static 'home/images/hand.jpg' %}" 
-                 class="h-56 w-full object-cover" />
+                 class="h-56 w-full object-cover" alt="General X-Rays">
             <div class="p-6">
-                <h3 class="text-2xl font-semibold mb-2">Genaral X-Rays</h3>
-                <p class="text-gray-600">Fast and high-quality imaging for accurate diagnosis.</p>
+                <h3 class="text-xl font-semibold mb-3">General X-Rays</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    General X-rays are quick and painless imaging tests used to view the inside of the body,
+                    especially bones and certain organs. They help diagnose fractures, infections, chest
+                    conditions, joint problems, and other medical issues using a low dose of radiation.
+                </p>
             </div>
         </div>
 
-        <!-- Card 2 -->
+        <!-- Ultrasound -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden">
+            <img src="{% static 'home/images/ultrasound.jpg' %}" 
+                 class="h-56 w-full object-cover" alt="Ultrasound">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold mb-3">Ultrasound</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Ultrasound uses high-frequency sound waves to produce real-time images of organs and
+                    tissues. It is safe, painless, and radiation-free, making it ideal for pregnancy,
+                    abdominal, and soft-tissue examinations.
+                </p>
+            </div>
+        </div>
 
-        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition">
+        <!-- CT Scan -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden">
             <img src="{% static 'home/images/brain.jpg' %}" 
-                 class="h-56 w-full object-cover" />
+                 class="h-56 w-full object-cover" alt="CT Scan">
             <div class="p-6">
-                <h3 class="text-2xl font-semibold mb-2">Ultrasound</h3>
-                <p class="text-gray-600">Safe and detailed imaging for multiple medical needs.</p>
+                <h3 class="text-xl font-semibold mb-3">CT Scan</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    A CT scan combines multiple X-ray images to create detailed cross-sectional views of
+                    the body. It helps detect internal injuries, tumors, infections, and complex conditions
+                    with high accuracy.
+                </p>
             </div>
         </div>
 
-        <!-- Card 3 -->
-
-        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition">
-            <img src="{% static 'home/images/ankle.jpg' %}" 
-                 class="h-56 w-full object-cover" />
-            <div class="p-6">
-                <h3 class="text-2xl font-semibold mb-2">CT Scans</h3>
-                <p class="text-gray-600">Advanced breast cancer screening with clarity.</p>
-            </div>
-        </div>
-
-        <!-- Card 4 -->
-
-        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition">
+        <!-- Theatre -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden">
             <img src="{% static 'home/images/chest.jpg' %}" 
-                 class="h-56 w-full object-cover" />
+                 class="h-56 w-full object-cover" alt="Theatre Imaging">
             <div class="p-6">
-                <h3 class="text-2xl font-semibold mb-2">Theatre</h3>
-                <p class="text-gray-600">Detailed imaging for soft tissues and organs .</p>
+                <h3 class="text-xl font-semibold mb-3">Theatre</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Theatre imaging provides real-time radiology support during surgical and medical
+                    procedures. It guides doctors with live imaging, improving accuracy, safety, and
+                    patient outcomes.
+                </p>
             </div>
+        </div>
 
     </div>
 </section>
 
-
 {% endblock %}
-
