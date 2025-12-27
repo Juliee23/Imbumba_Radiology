@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home',
+    'imbumba.home',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'imbumba.imbumba.wsgi.application'
+WSGI_APPLICATION = 'imbumba.wsgi.application'
 
 
 # Database
