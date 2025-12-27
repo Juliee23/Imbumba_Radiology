@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'imbumba.wsgi.application'
+WSGI_APPLICATION = 'imbumba.imbumba.wsgi.application'
 
 
 # Database
