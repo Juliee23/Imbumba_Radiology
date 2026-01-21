@@ -1,19 +1,97 @@
 {% extends 'home/base.html' %}
 
-{% block title %}Appointments | Imbumba Radiology Imaging {% endblock %}
+{% block title %}Appointments | Imbumba Radiology Imaging{% endblock %}
 
 {% block content %}
+<section class="py-20">
+  <div class="max-w-3xl mx-auto px-6">
 
-<section class="py-16 text-center">
-    <h2 class="text-4xl font-semibold text-blue-800 mb-6">Book an Appointment</h2>
-    <p class="text-lg text-gray-700 mb-10">Fill in your details below and our team will contact you soon.</p>
-    <form class="max-w-md mx-auto bg-white p-8 rounded-xl shadow-md space-y-4">
-        <input type="text" placeholder="Full Name" class="w-full border p-3 rounded-md" required>
-        <input type="email" placeholder="Email Address" class="w-full border p-3 rounded-md" required>
-        <input type="text" placeholder="Phone Number" class="w-full border p-3 rounded-md" required>
-        <textarea placeholder="Preferred Date or Notes" class="w-full border p-3 rounded-md"></textarea>
-        <button class="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">Submit</button>
-    </form>
+    <h2 class="text-4xl font-semibold text-blue-800 mb-4 text-center">
+      Book an Appointment
+    </h2>
+
+    <p class="text-lg text-gray-700 mb-10 text-center">
+      Please complete the form below.
+    </p>
+
+  <form id="appointmentForm"
+      class="bg-gray/10 p-8 rounded-xl shadow-lg grid grid-cols-1 md:grid-cols-2 gap-6">
+
+  <input id="full_name" required placeholder="Full Name" class="border p-3 rounded-md">
+  <input id="email" type="email" required placeholder="Email" class="border p-3 rounded-md">
+  <input id="phone" required placeholder="Phone Number" class="border p-3 rounded-md">
+
+  <select id="branch" required class="border p-3 rounded-md">
+    <option value="">Select Branch</option>
+    <option>Ladysmith (KZN-Main Branch)</option>
+    <option>Richards Bay (KZN Branch)</option>
+    <option>Katlehong (Gauteng Branch)</option>
+    <option>Vosloorus(Gauteng Branch)</option>
+  </select>
+
+  <select id="service" required class="border p-3 rounded-md">
+    <option value="">Select Service</option>
+    <option>General X-Ray</option>
+    <option>CT Scan</option>
+    <option>Ultrasound</option>
+    <option>Theatre Imaging</option>
+  </select>
+
+  <div class="flex flex-col">
+  <label for="date" class="text-sm font-medium text-gray-700 mb-1">
+    Preferred Date
+  </label>
+  <input id="date" name="date" type="date"
+    class="border p-3 rounded-md focus:ring focus:ring-blue-300">
+</div>
+
+<div class="flex flex-col">
+  <label for="time" class="text-sm font-medium text-gray-700 mb-1">
+    Preferred Time
+  </label>
+  <input id="time" name="time" type="time"
+    class="border p-3 rounded-md focus:ring focus:ring-blue-300">
+</div>
+
+
+  <textarea id="notes" rows="4"
+    placeholder="please specify details on examination needed e.g Chest X-Ray"
+    class="md:col-span-2 border p-3 rounded-md"></textarea>
+
+  <div class="md:col-span-2 text-center">
+    <button type="submit"
+      class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700">
+      Send via WhatsApp
+    </button>
+  </div>
+</form>
+
+  </div>
 </section>
 
+<script>
+document.getElementById("appointmentForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const message = `
+📅 *New Appointment Request*
+
+👤 Name: ${document.getElementById("full_name").value}
+📧 Email: ${document.getElementById("email").value}
+📞 Phone: ${document.getElementById("phone").value}
+🏥 Branch: ${document.getElementById("branch").value}
+🩻 Service: ${document.getElementById("service").value}
+📆 Date: ${document.getElementById("date").value}
+⏰ Time: ${document.getElementById("time").value}
+📝 Notes: ${document.getElementById("notes").value}
+  `;
+
+  const whatsappNumber = "27670259061";
+
+  const whatsappURL = `https://wa.me/${27670259061}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
+});
+</script>
+>
 {% endblock %}
