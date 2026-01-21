@@ -31,13 +31,14 @@ ALLOWED_HOSTS = ['https://imbumba-radiology.onrender.com','localhost','127.0.0.1
 # Application definition
 
 INSTALLED_APPS = [
+    'imbumba.home', 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home', 
+    
 ]
 
 MIDDLEWARE = [
