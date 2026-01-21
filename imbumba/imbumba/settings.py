@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-r*@_t^5ri%^x1g*)sjfv0&-kz@^8jh4x*0%)8z-jm2wd1$j1qm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://imbumba-radiology.onrender.com','localhost','127.0.0.1:8000' ]
 
 
 # Application definition
