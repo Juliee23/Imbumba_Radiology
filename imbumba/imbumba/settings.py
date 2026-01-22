@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-r*@_t^5ri%^x1g*)sjfv0&-kz@^8jh4x*0%)8z-jm2wd1$j1qm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['imbumba-radiology.onrender.com', 
+ALLOWED_HOSTS = ['imbumba-radiology.onrender.com',
+                 'imbumbaradiology.com',
+                 'www.imbumbaradiology.com', 
     ]
 
 
@@ -130,11 +132,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'www98.jnb2.host-h.net'  # Gmail SMTP server
-EMAIL_PORT = 995
+EMAIL_HOST = ''  # Gmail SMTP server
+EMAIL_PORT = 0
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 EMAIL_HOST_USER = 'reception.voslo@imbumbaradiology.com'         # your Gmail
-EMAIL_HOST_PASSWORD = '#Akani231-IRI'  # App Password, see note below
+EMAIL_HOST_PASSWORD = ''  # App Password, see note below
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
