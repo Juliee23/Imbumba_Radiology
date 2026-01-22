@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-ROOT_URLCONF = 'imbumba.urls'
+ROOT_URLCONF = 'imbumba.imbumba.urls'
 
 TEMPLATES = [
     {
